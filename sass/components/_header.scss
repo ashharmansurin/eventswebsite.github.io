@@ -1,0 +1,40 @@
+header{
+    width: 100%;
+    height:10vh;
+    background-color: white;
+    .header-container{
+        max-width: 85%;
+        margin:0 auto;
+        display: flex;
+        @include d-flex(space-between,center);
+        .logo{
+            font-size:5rem;
+            font-weight: 800;
+            color:$main-txt;
+            font-family: 'Fredoka One', cursive;
+            span{
+                color:$main-color;
+            }
+        }
+        nav{
+            .main-menu {
+                display: flex;
+                @include d-flex(none,center);
+                li{
+                    margin-right:6rem;
+                    a{
+                        font-size:1.8rem;
+                        font-weight: 400;
+                        color:$main-txt;
+                    }
+                    .login {
+                        @include cust-btn();
+                    }
+                }
+                li:last-child{
+                    margin-right:0rem;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,68 @@
+@mixin d-flex($justify-content,$align-items){
+    justify-content: $justify-content;
+    align-items: $align-items;
+}
+@mixin heading_2(){
+    h2{
+        font-size: 4rem;
+        font-weight: 600;
+        display: inline-block;
+        padding:1rem 2rem;
+        position: relative;
+        &::before{
+             content: '';
+             position: absolute;
+             bottom:0;
+             left:0;
+             width:3rem;
+             height:3rem;
+             border:.2rem solid $main-color;
+             border-width: 0 0 .4rem .4rem;
+        }
+        &::after{
+            content: '';
+            position: absolute;
+            top:0;
+            right:0;
+            width:3rem;
+            height:3rem;
+            border:.2rem solid $main-color;
+            border-width: .4rem .4rem 0 0;
+       }
+    }
+    p{
+      
+        font-size:1.6rem;
+        color:$main-txt;
+        opacity: .7;
+        width: 50%;
+        margin: 1.5rem auto 2rem auto;
+    }
+}
+
+@mixin cust-btn(){
+    display: inline-block;
+    background:$main-color;
+    padding: 1.3rem 2.5rem;
+    color: white!important;
+    font-size: 1.6rem;
+    font-weight: 600;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+        &::before{
+        content:'';
+        position: absolute;
+        top:0;
+        left:0;
+        width: 100%;
+        height:100%;
+        background-color: $main-txt;
+        z-index: -1;
+        transform: translateX(-105%);
+        transition: transform .3s linear;
+        }
+            &:hover::before{
+            transform: translateX(0%);
+            }
+}

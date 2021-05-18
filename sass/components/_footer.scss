@@ -1,0 +1,90 @@
+footer{
+    background-color: $main-color;
+    padding:4rem 0 1rem 0;
+    .footer-container{
+        .logo{
+            font-size:5rem;
+            font-weight: 800;
+            color:white;
+            font-family: 'Fredoka One', cursive;
+            span{
+                color:$main-txt;
+            }
+        }
+        h2 {
+            color: white;
+            font-size: 3rem;
+            margin-top: 2rem;
+            font-weight: 700;
+        }
+        p {
+            font-size: 1.9rem;
+            font-weight: 500;
+            color: white;
+        }
+        .social-icon{
+            display: flex;
+            align-items: center;
+            margin-top:1rem;
+            i{
+                font-size:1.5rem;
+                margin-left:1.5rem;
+                color:white;
+                &:hover{
+                    color:$main-txt;
+                }
+            }
+            i:first-child{
+                margin-left: 0rem;
+            }
+        }
+        ul{
+            margin-top: 2rem;
+            li{
+                margin-bottom: 1.1rem;
+                a{
+                    font-size:1.9rem;
+                    color:white;
+                    &:hover{
+                        color:$main-txt;
+                    }
+                }
+            }
+        }
+        .insta{
+            display: grid;
+            grid-template-columns: repeat(3,70px);
+            grid-template-rows: repeat(2,70px);
+            grid-gap:1rem;
+            margin-top: 2.2rem;
+            .item{
+                img{
+                    width: 100%;
+                    height:100%;
+                }
+            }
+        }
+        #subscrible{
+            margin-top:2rem;
+        }
+        .email-control{
+            display: flex;
+            align-items: center;
+            margin:2rem 0;
+            input[type="email"] {
+                padding: 1.5rem;
+                &::placeholder{
+                    font-size:1.3rem;
+                    font-weight: bold;
+                }
+            }
+            .sub-btn {
+                font-size: 1.5rem;
+                padding: 1.3rem;
+                border: none;
+                color: white;
+                background:$main-txt;
+            }
+        }
+    }
+}

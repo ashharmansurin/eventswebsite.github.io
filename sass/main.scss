@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Istok+Web:ital,wght@0,400;0,700;1,700&display=swap');
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Istok Web', sans-serif;
+}
+p,small,ul{
+    margin:0;
+    padding:0;
+}
+ul{
+    list-style-type: none;
+}
+a,a:hover{
+    text-decoration: none;
+}
+html{
+    font-size: 62.5%;
+}
+.margin-sm-t{
+    margin-top:2rem;
+}
+.margin-md-t{
+    margin-top:4.5rem;
+}
+.margin-lg-t{
+    margin-top:8rem;
+}
+
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+@import 'components/header';
+@import 'components/footer';
+@import 'partials/home';
