@@ -1,6 +1,6 @@
 header{
     width: 100%;
-    height:10vh;
+    height:12vh;
     background-color: white;
     .header-container{
         max-width: 85%;
@@ -25,10 +25,25 @@ header{
                     a{
                         font-size:1.8rem;
                         font-weight: 400;
+                        padding-bottom: .3rem;
                         color:$main-txt;
+                        position: relative;
+                        &::before{
+                            content: '';
+                            position: absolute;
+                            bottom:0;
+                            left:0;
+                            width: 0%;
+                            height:.2rem;
+                            background: $main-color;
+                            transition: width .3s linear;
+                        }
                     }
                     .login {
                         @include cust-btn();
+                    }
+                    &:hover a::before{
+                        width: 100%;
                     }
                 }
                 li:last-child{
@@ -36,5 +51,37 @@ header{
                 }
             }
         }
+    }
+}
+header.scroll-header{
+    background-color: $main-color;
+    transition: all .3s linear;
+    .header-container{
+        padding-bottom: 1.5rem!important;
+        .logo{
+           
+            color:white!important;
+           
+            span{
+                color:$main-txt;
+            }
+        }
+        nav{
+            .main-menu{
+                li{
+                    a{
+                        color:white;
+                    }
+                    .login{
+                        background-color: white;
+                        color:$main-color!important;
+                        &:hover{
+                            color:white!important;
+                        }
+                    }
+                }
+            }
+        }
+       
     }
 }

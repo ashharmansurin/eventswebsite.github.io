@@ -72,18 +72,25 @@ footer{
             align-items: center;
             margin:2rem 0;
             input[type="email"] {
-                padding: 1.5rem;
+                padding: 1.9rem;
+                flex-basis: 75%;
+                border: none;
                 &::placeholder{
                     font-size:1.3rem;
                     font-weight: bold;
                 }
             }
             .sub-btn {
-                font-size: 1.5rem;
+                flex-basis: 25%;
+                font-size: 1.8rem;
                 padding: 1.3rem;
                 border: none;
                 color: white;
                 background:$main-txt;
+                &:hover{
+                    color:$main-txt;
+                    background-color: white;
+                }
             }
         }
     }

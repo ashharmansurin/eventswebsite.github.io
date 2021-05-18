@@ -5,7 +5,8 @@
 @mixin heading_2(){
     h2{
         font-size: 4rem;
-        font-weight: 600;
+        font-weight: 800;
+        color:$main-txt;
         display: inline-block;
         padding:1rem 2rem;
         position: relative;

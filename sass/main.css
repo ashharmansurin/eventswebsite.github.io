@@ -1,9 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&family=Istok+Web:ital,wght@0,400;0,700;1,700&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Istok Web", sans-serif;
 }
 
 p, small, ul {
@@ -21,6 +19,7 @@ a, a:hover {
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 .margin-sm-t {
@@ -37,7 +36,7 @@ html {
 
 header {
   width: 100%;
-  height: 10vh;
+  height: 12vh;
   background-color: white;
 }
 header .header-container {
@@ -67,7 +66,19 @@ header .header-container nav .main-menu li {
 header .header-container nav .main-menu li a {
   font-size: 1.8rem;
   font-weight: 400;
+  padding-bottom: 0.3rem;
   color: #212F3C;
+  position: relative;
+}
+header .header-container nav .main-menu li a::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 0.2rem;
+  background: #9B59B6;
+  transition: width 0.3s linear;
 }
 header .header-container nav .main-menu li .login {
   display: inline-block;
@@ -95,8 +106,35 @@ header .header-container nav .main-menu li .login::before {
 header .header-container nav .main-menu li .login:hover::before {
   transform: translateX(0%);
 }
+header .header-container nav .main-menu li:hover a::before {
+  width: 100%;
+}
 header .header-container nav .main-menu li:last-child {
   margin-right: 0rem;
+}
+
+header.scroll-header {
+  background-color: #9B59B6;
+  transition: all 0.3s linear;
+}
+header.scroll-header .header-container {
+  padding-bottom: 1.5rem !important;
+}
+header.scroll-header .header-container .logo {
+  color: white !important;
+}
+header.scroll-header .header-container .logo span {
+  color: #212F3C;
+}
+header.scroll-header .header-container nav .main-menu li a {
+  color: white;
+}
+header.scroll-header .header-container nav .main-menu li .login {
+  background-color: white;
+  color: #9B59B6 !important;
+}
+header.scroll-header .header-container nav .main-menu li .login:hover {
+  color: white !important;
 }
 
 footer {
@@ -172,7 +210,9 @@ footer .footer-container .email-control {
   margin: 2rem 0;
 }
 footer .footer-container .email-control input[type=email] {
-  padding: 1.5rem;
+  padding: 1.9rem;
+  flex-basis: 75%;
+  border: none;
 }
 footer .footer-container .email-control input[type=email]::-moz-placeholder {
   font-size: 1.3rem;
@@ -187,11 +227,16 @@ footer .footer-container .email-control input[type=email]::placeholder {
   font-weight: bold;
 }
 footer .footer-container .email-control .sub-btn {
-  font-size: 1.5rem;
+  flex-basis: 25%;
+  font-size: 1.8rem;
   padding: 1.3rem;
   border: none;
   color: white;
   background: #212F3C;
+}
+footer .footer-container .email-control .sub-btn:hover {
+  color: #212F3C;
+  background-color: white;
 }
 
 .hero {
@@ -201,7 +246,7 @@ footer .footer-container .email-control .sub-btn {
 }
 .hero .hero-content h1 {
   font-size: 5rem;
-  font-weight: 600;
+  font-weight: 800;
 }
 .hero .hero-content p {
   margin: 1.5rem 0 2.2rem 0;
@@ -238,7 +283,8 @@ footer .footer-container .email-control .sub-btn {
 
 .about .about-content h2 {
   font-size: 4rem;
-  font-weight: 600;
+  font-weight: 800;
+  color: #212F3C;
 }
 .about .about-content p {
   margin: 1.5rem 0 2.2rem 0;
@@ -299,7 +345,8 @@ footer .footer-container .email-control .sub-btn {
 }
 .speakers .heading h2 {
   font-size: 4rem;
-  font-weight: 600;
+  font-weight: 800;
+  color: #212F3C;
   display: inline-block;
   padding: 1rem 2rem;
   position: relative;
@@ -400,7 +447,8 @@ footer .footer-container .email-control .sub-btn {
 }
 .schedule .heading h2 {
   font-size: 4rem;
-  font-weight: 600;
+  font-weight: 800;
+  color: #212F3C;
   display: inline-block;
   padding: 1rem 2rem;
   position: relative;
@@ -611,7 +659,8 @@ footer .footer-container .email-control .sub-btn {
 }
 .event .heading h2 {
   font-size: 4rem;
-  font-weight: 600;
+  font-weight: 800;
+  color: #212F3C;
   display: inline-block;
   padding: 1rem 2rem;
   position: relative;
@@ -654,13 +703,13 @@ footer .footer-container .email-control .sub-btn {
 }
 .event .event_card h1 {
   font-size: 3.3rem;
-  font-weight: 600;
+  font-weight: 800;
   color: #212F3C;
 }
 .event .event_card h2 {
   margin: 1.3rem;
   font-size: 3rem;
-  font-weight: 600;
+  font-weight: 700;
   color: #212F3C;
 }
 .event .event_card .event-card-list {
@@ -720,7 +769,8 @@ footer .footer-container .email-control .sub-btn {
 }
 .event_sponsor_brand .heading h2 {
   font-size: 4rem;
-  font-weight: 600;
+  font-weight: 800;
+  color: #212F3C;
   display: inline-block;
   padding: 1rem 2rem;
   position: relative;
@@ -760,7 +810,8 @@ footer .footer-container .email-control .sub-btn {
 }
 .latest_blog .heading h2 {
   font-size: 4rem;
-  font-weight: 600;
+  font-weight: 800;
+  color: #212F3C;
   display: inline-block;
   padding: 1rem 2rem;
   position: relative;
