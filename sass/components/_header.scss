@@ -25,7 +25,7 @@ header{
                     a{
                         font-size:1.8rem;
                         font-weight: 400;
-                        padding-bottom: .3rem;
+                        padding: 1rem;
                         color:$main-txt;
                         position: relative;
                         &::before{
@@ -39,6 +39,10 @@ header{
                             transition: width .3s linear;
                         }
                     }
+                    a.active{
+                        background:$main-color;
+                        color:white;
+                    }
                     .login {
                         @include cust-btn();
                     }
@@ -49,6 +53,7 @@ header{
                 li:last-child{
                     margin-right:0rem;
                 }
+               
             }
         }
     }

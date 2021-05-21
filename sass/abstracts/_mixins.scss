@@ -67,3 +67,37 @@
             transform: translateX(0%);
             }
 }
+
+@mixin about-container(){
+    max-width: 100vw;
+    height: 100%;
+    margin:0 auto;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+
+}
+
+@mixin about-content(){
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding:8em;
+    h1 {
+        font-size: 4.5rem;
+        font-weight: 800;
+        margin-bottom: 2rem;
+        color:$main-txt;
+    }
+    p {
+        font-size: 1.6rem;
+        color: gray;
+        line-height: 1.8;
+    }
+}
+
+@mixin about-image(){
+    img{
+        width: 100%;
+        height: 100%;
+    }
+}

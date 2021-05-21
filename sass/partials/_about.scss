@@ -1,0 +1,67 @@
+
+.hero_about{
+    margin-top:10rem;
+    width: 100%;
+    height:80vh;
+    background-image:linear-gradient(#9b59b6ab,#9b59b6ab), url(../images/speaker3.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    &_container{
+            padding: 10rem;
+            width: 70%;
+            color: white;
+            h1 {
+                font-size: 5rem;
+                font-weight: 700;
+                margin-bottom: 1.5rem;
+            }
+        p{
+            font-size: 1.8rem;
+            font-weight: 500;
+        }
+    }
+}
+.about_event {
+    width: 100%;
+    height: 80vh!important;
+   
+    &_container{
+      @include about-container();
+        .right{
+           @include about-content();
+        }
+        .left{
+           @include about-image();
+        }
+    }
+}
+.digital_solution{
+    width: 100%;
+    height: 80vh!important;
+    &_container{
+        @include about-container();
+        .right{
+            @include about-image();
+         }
+         .left{
+           
+            @include about-content();
+         }
+    }
+}
+
+.smart_grow {
+    width: 100%;
+    height: 80vh!important;
+   
+    &_container{
+      @include about-container();
+        .right{
+           @include about-content();
+        }
+        .left{
+           @include about-image();
+        }
+    }
+}

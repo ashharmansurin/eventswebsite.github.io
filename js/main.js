@@ -10,3 +10,11 @@ window.addEventListener('scroll', function (event) {
         header.classList.remove('scroll-header');
     }
 });
+
+//
+let navLink = document.querySelector('.main-menu').querySelectorAll('.nav_link');
+console.log(navLink);
+
+navLink.forEach(ele => {
+    console.log(ele);
+});
